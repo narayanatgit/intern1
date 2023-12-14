@@ -22,9 +22,8 @@ async function read(event) {
       date,
       msg
     })
-  })
-  const data = res.json();
-  console.log(data);
+  }).then(console.log("success"))
+ 
 }
 
 (function() {
