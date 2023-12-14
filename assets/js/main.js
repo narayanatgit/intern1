@@ -7,10 +7,10 @@ async function read(event) {
   const phno=document.getElementById("subject").value;
   const date=document.getElementById("datetimepicker").value;
   const msg=document.getElementById("message").value;
-  console.log(username);
+ 
  
 
-  const res = await fetch("https://dmeos.onrender.com/", {
+ await fetch("https://dmeos.onrender.com/", {
     method: "POST",
     headers: {
       "content-Type": "application/json",
@@ -22,7 +22,7 @@ async function read(event) {
       date,
       msg
     })
-  }).then(console.log("success"))
+  }).then(response => {window.location.reload()})
  
 }
 
